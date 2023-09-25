@@ -1,0 +1,81 @@
+{
+  "name": "cstojs-vscode-ext",
+  "publisher": "TiLied",
+  "author": {
+    "name": "TiLied"
+  },
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TiLied/CSTOJS_VSCode_Ext"
+  },
+  "license":"SEE LICENSE IN LICENSE",
+  "displayName": "CSTOJS for VSCode",
+  "description": "Extension for library CSharpToJavaScript, using CLI",
+  
+  "version": "0.0.1",
+  
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords":["csharp", "conversion", "generating", "javascript", "cs", "js"],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "CSTOJS",
+      "properties": {
+        "cstojs-vscode-ext.debug": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "Debug. When set to true prints additional info to console, cs lines to js file and creates file Debug.txt."
+        }
+      }
+    },
+    "menus": {
+      "explorer/context": [
+        {
+          "when": "resourceLangId == csharp",
+          "command": "cstojs-vscode-ext.convert",
+          "group": "5_cutcopypaste@50"
+        }
+      ],
+      "commandPalette": [
+        {
+          "when": "editorLangId == csharp",
+          "command": "cstojs-vscode-ext.convert"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "cstojs-vscode-ext.convert",
+        "title": "Convert to JS"
+      }
+    ]
+  },
+  "pricing":"Free",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.82.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "eslint": "^8.47.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.6",
+    "@vscode/test-electron": "^2.3.4"
+  }
+}
