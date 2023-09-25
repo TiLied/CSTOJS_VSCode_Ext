@@ -13,7 +13,7 @@
   },
   "license":"SEE LICENSE IN LICENSE",
   "displayName": "CSTOJS for VSCode",
-  "description": "Extension for library CSharpToJavaScript, using CLI",
+  "description": "Extension for CSharpToJavaScript library, using CLI.",
   
   "version": "0.0.1",
   
@@ -57,6 +57,7 @@
       }
     ]
   },
+  "icon": "icons\\CSTOJS.png",
   "pricing":"Free",
   "scripts": {
     "vscode:prepublish": "npm run compile",
