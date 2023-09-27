@@ -21,7 +21,7 @@
     "Programming Languages",
     "Other"
   ],
-  "keywords":["csharp", "conversion", "generating", "javascript", "cs", "js"],
+  "keywords":["csharp", "conversion", "javascript", "cs", "js", "generating"],
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
@@ -57,7 +57,7 @@
       }
     ]
   },
-  "icon": "icons\\CSTOJS.png",
+  "icon": "icons/CSTOJS_256.png",
   "pricing":"Free",
   "scripts": {
     "vscode:prepublish": "npm run compile",

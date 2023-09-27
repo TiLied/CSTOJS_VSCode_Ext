@@ -6,23 +6,23 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "CSTOJS_CLI/0.0.01": {
+      "CSTOJS_CLI/0.0.02": {
         "dependencies": {
-          "CSharpToJavaScript": "0.0.4",
+          "CSharpToJavaScript": "0.0.5",
           "System.CommandLine": "2.0.0-beta4.22272.1"
         },
         "runtime": {
           "CSTOJS_CLI.dll": {}
         }
       },
-      "CSharpToJavaScript/0.0.4": {
+      "CSharpToJavaScript/0.0.5": {
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp": "4.7.0"
         },
         "runtime": {
           "lib/net7.0/CSharpToJavaScript.dll": {
-            "assemblyVersion": "0.0.4.0",
-            "fileVersion": "0.0.4.0"
+            "assemblyVersion": "0.0.5.0",
+            "fileVersion": "0.0.5.0"
           }
         }
       },
@@ -193,17 +193,17 @@
     }
   },
   "libraries": {
-    "CSTOJS_CLI/0.0.01": {
+    "CSTOJS_CLI/0.0.02": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "CSharpToJavaScript/0.0.4": {
+    "CSharpToJavaScript/0.0.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-uXZEc48QY32VmO4dl1q975zOiXFdMe51r+XPRwR3jpSbHd3bnzdvCdCt/DWCpZbfhYC3LiYh3BqItPZKL9xImw==",
-      "path": "csharptojavascript/0.0.4",
-      "hashPath": "csharptojavascript.0.0.4.nupkg.sha512"
+      "sha512": "sha512-pM2CWCXGjQzK6QD8iqHy1gdiZ1vfG9NuQfJWYTD0LrRqbtGYDzftfHZEDQzTGUJCjFf267R5raEPACITo2QHPw==",
+      "path": "csharptojavascript/0.0.5",
+      "hashPath": "csharptojavascript.0.0.5.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.Analyzers/3.3.4": {
       "type": "package",
