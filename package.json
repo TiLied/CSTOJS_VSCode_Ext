@@ -15,7 +15,7 @@
   "displayName": "CSTOJS for VSCode",
   "description": "Extension for CSharpToJavaScript library, using CLI.",
   
-  "version": "0.0.1",
+  "version": "0.0.2",
   
   "categories": [
     "Programming Languages",
@@ -31,7 +31,12 @@
         "cstojs-vscode-ext.debug": {
           "type": "boolean",
           "default": false,
-          "markdownDescription": "Debug. When set to true prints additional info to console, cs lines to js file and creates file Debug.txt."
+          "markdownDescription": "Debug. When set to true prints additional info to console, cs lines to js file."
+        },
+        "cstojs-vscode-ext.pathToCSTOJS_CLI": {
+          "type": "string",
+          "default": "",
+          "markdownDescription": "Path To CSTOJS_CLI. Default is null(empty string), means using Embedded CSTOJS_CLI."
         }
       }
     },
