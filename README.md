@@ -5,7 +5,7 @@ Visual Studio Code Extension for [CSharpToJavaScript library](https://github.com
 ![Example gif](https://raw.githubusercontent.com/TiLied/CSTOJS_VSCode_Ext/main/icons/ExampleGif.gif)
 
 ## Some Todos
-- [ ] Add the remaining [options that in CLI](https://github.com/TiLied/CSTOJS_CLI/blob/47d9909c8ffbd93704c2679c67b99fab9854c73a/CSTOJS_CLI/Program.cs#L93)
+- [X] ~Add the remaining [options that in CLI](https://github.com/TiLied/CSTOJS_CLI/blob/47d9909c8ffbd93704c2679c67b99fab9854c73a/CSTOJS_CLI/Program.cs#L93)~
 
 ## Related Repository 
 CSharpToJavaScript library: https://github.com/TiLied/CSharpToJavaScript

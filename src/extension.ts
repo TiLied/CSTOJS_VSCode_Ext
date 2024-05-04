@@ -48,10 +48,38 @@ export function activate(context: vscode.ExtensionContext) {
 			
 		let _args = ["f", _pathToFile, "-OutPutPath", _directoryOutPut, "-DisableConsoleColors", "true"];
 				
-		let _debug = _options.get("debug");
+		let _debug = _options.get("Debug");
 		if (_debug == true)
 		{
 			_args.push("-Debug");
+			_args.push("true");
+		}
+		
+		let _dco = _options.get("DisableConsoleOutput");
+		if (_dco == true)
+		{
+			_args.push("-DisableConsoleOutput");
+			_args.push("true");
+		}
+		
+		let _uvol = _options.get("UseVarOverLet");
+		if (_uvol == true)
+		{
+			_args.push("-UseVarOverLet");
+			_args.push("true");
+		}
+		
+		let _kbotsl = _options.get("KeepBraceOnTheSameLine");
+		if (_kbotsl == true)
+		{
+			_args.push("-KeepBraceOnTheSameLine");
+			_args.push("true");
+		}
+		
+		let _nw = _options.get("NormalizeWhitespace");
+		if (_nw == true)
+		{
+			_args.push("-NormalizeWhitespace");
 			_args.push("true");
 		}
 		

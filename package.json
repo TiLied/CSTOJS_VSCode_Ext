@@ -13,9 +13,9 @@
   },
   "license":"SEE LICENSE IN LICENSE",
   "displayName": "CSTOJS for VSCode",
-  "description": "Extension for CSharpToJavaScript library, using CLI.",
+  "description": "VS Code Extension for CSharpToJavaScript library, using CLI.",
   
-  "version": "0.0.4",
+  "version": "0.0.5",
   
   "categories": [
     "Programming Languages",
@@ -28,11 +28,34 @@
     "configuration": {
       "title": "CSTOJS",
       "properties": {
-        "cstojs-vscode-ext.debug": {
+        "cstojs-vscode-ext.Debug": {
           "type": "boolean",
           "default": false,
           "markdownDescription": "Debug. When set to true prints additional info to console, cs lines to js file."
         },
+		"cstojs-vscode-ext.DisableConsoleOutput": {
+			"type": "boolean",
+			"default": false,
+			"markdownDescription": "Self-explanatory, Disable Console Output."
+		},
+		"cstojs-vscode-ext.UseVarOverLet": {
+			"type": "boolean",
+			"default": false,
+			"markdownDescription": "Self-explanatory, Use var over let."
+		},	
+		"cstojs-vscode-ext.KeepBraceOnTheSameLine": {
+			"type": "boolean",
+			"default": false,
+			"markdownDescription": "Keep Brace { on the same line."
+		},
+		"cstojs-vscode-ext.NormalizeWhitespace": {
+			"type": "boolean",
+			"default": false,
+			"markdownDescription": "Self-explanatory, Normalize Whitespace."
+		},
+		
+		
+		
         "cstojs-vscode-ext.pathToCSTOJS_CLI": {
           "type": "string",
           "default": "",
