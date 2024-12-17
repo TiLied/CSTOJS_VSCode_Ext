@@ -18,3 +18,6 @@ VS Extension using CLI: https://github.com/TiLied/CSTOJS_VS_Ext
 
 Website/documentation: https://github.com/TiLied/CSTOJS_Pages
 - Blazor WebAssembly: https://github.com/TiLied/CSTOJS_BWA
+
+## Thanks for packages and content <3
+There are so many dependencies... thanks everyone!
