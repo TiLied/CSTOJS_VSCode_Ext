@@ -39,7 +39,7 @@ export function activate(context: vscode.ExtensionContext) {
 		
 		let _pathToCli = context.asAbsolutePath(path.join('CSTOJS_CLI', "CSTOJS_CLI.exe"));
 		
-		let _args = ["f", _pathToFile, "-OutPutPath", _directoryOutPut];
+		let _args = ["f", _pathToFile, "-OutPutPath", _directoryOutPut, "-DisableConsoleColors", "true"];
 		
 		let _options = vscode.workspace.getConfiguration('cstojs-vscode-ext');
 		
