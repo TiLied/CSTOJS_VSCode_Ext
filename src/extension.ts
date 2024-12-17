@@ -42,8 +42,10 @@ export function activate(context: vscode.ExtensionContext) {
 		let _pathToCli = _options.get("pathToCSTOJS_CLI") as string;
 		
 		if (_pathToCli == null || _pathToCli == "")
-			_pathToCli = context.asAbsolutePath(path.join('CSTOJS_CLI', "CSTOJS_CLI.exe"));
+			_pathToCli = context.asAbsolutePath(path.join('CSTOJS_CLI', "CSTOJS_CLI.dll"));
 		
+		_pathToCli = "dotnet " + _pathToCli + " ";
+			
 		let _args = ["f", _pathToFile, "-OutPutPath", _directoryOutPut, "-DisableConsoleColors", "true"];
 				
 		let _debug = _options.get("debug");
@@ -53,7 +55,7 @@ export function activate(context: vscode.ExtensionContext) {
 			_args.push("true");
 		}
 		
-		const _child = cp.execFile(_pathToCli, _args, (error, stdout, stderr) => {
+		const _child = cp.exec(_pathToCli + _args.join(" "), (error, stdout, stderr) => {
 			if (error) {
 				throw error;
 			}
