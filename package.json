@@ -11,17 +11,22 @@
     "type": "git",
     "url": "https://github.com/TiLied/CSTOJS_VSCode_Ext"
   },
-  "license":"SEE LICENSE IN LICENSE",
+  "license": "SEE LICENSE IN LICENSE",
   "displayName": "CSTOJS for VSCode",
   "description": "VS Code Extension for CSharpToJavaScript library, using CLI.",
-  
   "version": "0.0.5",
-  
   "categories": [
     "Programming Languages",
     "Other"
   ],
-  "keywords":["csharp", "conversion", "javascript", "cs", "js", "generating"],
+  "keywords": [
+    "csharp",
+    "conversion",
+    "javascript",
+    "cs",
+    "js",
+    "generating"
+  ],
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
@@ -33,29 +38,26 @@
           "default": false,
           "markdownDescription": "Debug. When set to true prints additional info to console, cs lines to js file."
         },
-		"cstojs-vscode-ext.DisableConsoleOutput": {
-			"type": "boolean",
-			"default": false,
-			"markdownDescription": "Self-explanatory, Disable Console Output."
-		},
-		"cstojs-vscode-ext.UseVarOverLet": {
-			"type": "boolean",
-			"default": false,
-			"markdownDescription": "Self-explanatory, Use var over let."
-		},	
-		"cstojs-vscode-ext.KeepBraceOnTheSameLine": {
-			"type": "boolean",
-			"default": false,
-			"markdownDescription": "Keep Brace { on the same line."
-		},
-		"cstojs-vscode-ext.NormalizeWhitespace": {
-			"type": "boolean",
-			"default": false,
-			"markdownDescription": "Self-explanatory, Normalize Whitespace."
-		},
-		
-		
-		
+        "cstojs-vscode-ext.DisableConsoleOutput": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "Self-explanatory, Disable Console Output."
+        },
+        "cstojs-vscode-ext.UseVarOverLet": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "Self-explanatory, Use var over let."
+        },
+        "cstojs-vscode-ext.KeepBraceOnTheSameLine": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "Keep Brace { on the same line."
+        },
+        "cstojs-vscode-ext.NormalizeWhitespace": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "Self-explanatory, Normalize Whitespace."
+        },
         "cstojs-vscode-ext.pathToCSTOJS_CLI": {
           "type": "string",
           "default": "",
@@ -86,7 +88,7 @@
     ]
   },
   "icon": "icons/CSTOJS_256.png",
-  "pricing":"Free",
+  "pricing": "Free",
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
@@ -96,15 +98,15 @@
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.82.0",
-    "@types/mocha": "^10.0.1",
-    "@types/node": "16.x",
-    "@typescript-eslint/eslint-plugin": "^6.4.1",
-    "@typescript-eslint/parser": "^6.4.1",
-    "eslint": "^8.47.0",
-    "glob": "^10.3.3",
-    "mocha": "^10.2.0",
-    "typescript": "^5.1.6",
-    "@vscode/test-electron": "^2.3.4"
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^16.18.122",
+    "@types/vscode": "^1.96.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^8.57.1",
+    "glob": "^10.4.5",
+    "mocha": "^10.8.2",
+    "typescript": "^5.7.2"
   }
 }
