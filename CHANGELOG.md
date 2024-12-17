@@ -1,4 +1,9 @@
 # Change Log
+## 0.0.04
+- Updated CSTOJS_CLI to [0.0.03](https://github.com/TiLied/CSTOJS_CLI/releases/tag/0.0.03).
+- "Path To CSTOJS_CLI" option more clear path to dll, not exe.
+- Small fixes.
+
 ## 0.0.03
 - Fixed readme.
 ## 0.0.02

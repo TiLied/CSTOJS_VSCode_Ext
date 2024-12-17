@@ -15,7 +15,7 @@
   "displayName": "CSTOJS for VSCode",
   "description": "Extension for CSharpToJavaScript library, using CLI.",
   
-  "version": "0.0.3",
+  "version": "0.0.4",
   
   "categories": [
     "Programming Languages",
@@ -36,7 +36,7 @@
         "cstojs-vscode-ext.pathToCSTOJS_CLI": {
           "type": "string",
           "default": "",
-          "markdownDescription": "Path To CSTOJS_CLI. Default is null(empty string), means using Embedded CSTOJS_CLI."
+          "markdownDescription": "Path To CSTOJS_CLI.dll. Default is null(empty string), means using Embedded CSTOJS_CLI."
         }
       }
     },
