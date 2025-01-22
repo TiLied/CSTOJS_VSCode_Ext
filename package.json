@@ -1,112 +1,124 @@
 {
-  "name": "cstojs-vscode-ext",
-  "publisher": "TiLied",
-  "author": {
-    "name": "TiLied"
-  },
-  "engines": {
-    "vscode": "^1.82.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/TiLied/CSTOJS_VSCode_Ext"
-  },
-  "license": "SEE LICENSE IN LICENSE",
-  "displayName": "CSTOJS for VSCode",
-  "description": "VS Code Extension for CSharpToJavaScript library, using CLI.",
-  "version": "0.0.5",
-  "categories": [
-    "Programming Languages",
-    "Other"
-  ],
-  "keywords": [
-    "csharp",
-    "conversion",
-    "javascript",
-    "cs",
-    "js",
-    "generating"
-  ],
-  "activationEvents": [],
-  "main": "./out/extension.js",
-  "contributes": {
-    "configuration": {
-      "title": "CSTOJS",
-      "properties": {
-        "cstojs-vscode-ext.Debug": {
-          "type": "boolean",
-          "default": false,
-          "markdownDescription": "Debug. When set to true prints additional info to console, cs lines to js file."
-        },
-        "cstojs-vscode-ext.DisableConsoleOutput": {
-          "type": "boolean",
-          "default": false,
-          "markdownDescription": "Self-explanatory, Disable Console Output."
-        },
-        "cstojs-vscode-ext.UseVarOverLet": {
-          "type": "boolean",
-          "default": false,
-          "markdownDescription": "Self-explanatory, Use var over let."
-        },
-        "cstojs-vscode-ext.KeepBraceOnTheSameLine": {
-          "type": "boolean",
-          "default": false,
-          "markdownDescription": "Keep Brace { on the same line."
-        },
-        "cstojs-vscode-ext.NormalizeWhitespace": {
-          "type": "boolean",
-          "default": false,
-          "markdownDescription": "Self-explanatory, Normalize Whitespace."
-        },
-        "cstojs-vscode-ext.pathToCSTOJS_CLI": {
-          "type": "string",
-          "default": "",
-          "markdownDescription": "Path To CSTOJS_CLI.dll. Default is null(empty string), means using Embedded CSTOJS_CLI."
-        }
-      }
-    },
-    "menus": {
-      "explorer/context": [
-        {
-          "when": "resourceLangId == csharp",
-          "command": "cstojs-vscode-ext.convert",
-          "group": "5_cutcopypaste@50"
-        }
-      ],
-      "commandPalette": [
-        {
-          "when": "editorLangId == csharp",
-          "command": "cstojs-vscode-ext.convert"
-        }
-      ]
-    },
-    "commands": [
-      {
-        "command": "cstojs-vscode-ext.convert",
-        "title": "Convert to JS"
-      }
-    ]
-  },
-  "icon": "icons/CSTOJS_256.png",
-  "pricing": "Free",
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
-  },
-  "devDependencies": {
-    "@types/mocha": "^10.0.10",
-    "@types/node": "^16.18.122",
-    "@types/vscode": "^1.96.0",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
-    "@vscode/test-electron": "^2.4.1",
-    "eslint": "^8.57.1",
-    "glob": "^10.4.5",
-    "mocha": "^10.8.2",
-    "typescript": "^5.7.2"
-  }
+	"name": "cstojs-vscode-ext",
+	"publisher": "TiLied",
+	"author": {
+		"name": "TiLied"
+	},
+	"engines": {
+		"vscode": "^1.95.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/TiLied/CSTOJS_VSCode_Ext"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"displayName": "CSTOJS for VSCode",
+	"description": "VS Code Extension for CSharpToJavaScript library, using CLI.",
+	"version": "0.0.6",
+	"categories": [
+		"Programming Languages",
+		"Other"
+	],
+	"keywords": [
+		"csharp",
+		"conversion",
+		"javascript",
+		"cs",
+		"js",
+		"generating",
+		"translation"
+	],
+	"activationEvents": [],
+	"main": "./out/extension.js",
+	"contributes": {
+		"configuration": {
+			"title": "CSTOJS",
+			"properties": {
+				"cstojs-vscode-ext.Debug": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "Debug. When set to true prints additional info to console, cs lines to js file."
+				},
+				"cstojs-vscode-ext.DisableConsoleOutput": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "Self-explanatory, Disable Console Output."
+				},
+				"cstojs-vscode-ext.UseVarOverLet": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "Self-explanatory, Use var over let."
+				},
+				"cstojs-vscode-ext.KeepBraceOnTheSameLine": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "Keep Brace { on the same line."
+				},
+				"cstojs-vscode-ext.NormalizeWhitespace": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "Self-explanatory, Normalize Whitespace."
+				},
+				"cstojs-vscode-ext.UseStrictEquality": {
+					"type": "boolean",
+					"default": false,
+					"markdownDescription": "Replace '==' with '===' and '!=' with '!=='."
+				},
+				"cstojs-vscode-ext.CustomCSNamesToJS": {
+					"type": "string",
+					"default": "",
+					"markdownDescription": "List of custom names to convert. Example: Console-console,WriteLine-log"
+				},
+				"cstojs-vscode-ext.pathToCSTOJS_CLI": {
+					"type": "string",
+					"default": "",
+					"markdownDescription": "Path To CSTOJS_CLI.dll. Default is null(empty string), means using Embedded CSTOJS_CLI."
+				}
+			}
+		},
+		"menus": {
+			"explorer/context": [
+				{
+					"when": "resourceLangId == csharp",
+					"command": "cstojs-vscode-ext.convert",
+					"group": "5_cutcopypaste@50"
+				}
+			],
+			"commandPalette": [
+				{
+					"when": "editorLangId == csharp",
+					"command": "cstojs-vscode-ext.convert"
+				}
+			]
+		},
+		"commands": [
+			{
+				"command": "cstojs-vscode-ext.convert",
+				"title": "Convert to JS"
+			}
+		]
+	},
+	"icon": "icons/CSTOJS_256.png",
+	"pricing": "Free",
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/mocha": "^10.0.10",
+		"@types/node": "^22.10.7",
+		"@types/vscode": "^1.96.0",
+		"@typescript-eslint/eslint-plugin": "^8.21.0",
+		"@typescript-eslint/parser": "^8.21.0",
+		"@vscode/test-electron": "^2.4.1",
+		"eslint": "^9.18.0",
+		"glob": "^11.0.1",
+		"mocha": "^11.1.0",
+		"node-api-dotnet": "^0.8.20",
+		"typescript": "^5.7.3"
+	}
 }

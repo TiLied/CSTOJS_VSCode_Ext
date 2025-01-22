@@ -1,4 +1,10 @@
 # Change Log
+## 0.0.06
+- Updated CSTOJS_CLI to [0.0.05](https://github.com/TiLied/CSTOJS_CLI/releases/tag/0.0.05).
+- Added "UseStrictEquality" option.
+- Added "CustomCSNamesToJS" option.
+
+
 ## 0.0.05
 - Updated CSTOJS_CLI to [0.0.04](https://github.com/TiLied/CSTOJS_CLI/releases/tag/0.0.04).
 - Added options
