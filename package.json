@@ -5,7 +5,7 @@
 		"name": "TiLied"
 	},
 	"engines": {
-		"vscode": "^1.95.0"
+		"vscode": "^1.96.0"
 	},
 	"repository": {
 		"type": "git",
@@ -14,7 +14,7 @@
 	"license": "SEE LICENSE IN LICENSE",
 	"displayName": "CSTOJS for VSCode",
 	"description": "VS Code Extension for CSharpToJavaScript library, using CLI.",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"categories": [
 		"Programming Languages",
 		"Other"

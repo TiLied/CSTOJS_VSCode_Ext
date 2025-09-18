@@ -1,4 +1,8 @@
 # Change Log
+
+## 0.0.7
+- Updated CSTOJS_CLI to [0.0.06](https://github.com/TiLied/CSTOJS_CLI/releases/tag/0.0.06).
+
 ## 0.0.06
 - Updated CSTOJS_CLI to [0.0.05](https://github.com/TiLied/CSTOJS_CLI/releases/tag/0.0.05).
 - Added "UseStrictEquality" option.
