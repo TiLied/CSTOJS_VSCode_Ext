@@ -1,5 +1,5 @@
 # CSTOJS_VSCode_Ext
-
+# [Deprecated] Use cli: https://github.com/TiLied/CSTOJS_CLI
 Visual Studio Code Extension for [CSharpToJavaScript library](https://github.com/TiLied/CSharpToJavaScript), using [CLI](https://github.com/TiLied/CSTOJS_CLI).
 
 ![Example gif](https://raw.githubusercontent.com/TiLied/CSTOJS_VSCode_Ext/main/icons/ExampleGif.gif)
